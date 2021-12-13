@@ -1,5 +1,4 @@
 import React from "react";
-
 class Details extends React.Component {
   render() {
     let details = this.props.details; //Receiving Props coming from App
