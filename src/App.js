@@ -1,12 +1,13 @@
 import React from "react";
 import Counter from "./Components/Counter";
 import Details from "./Components/Details";
+import UserInfo from "./Components/UserInfo";
 
 class App extends React.Component {  //Simple class Component
   constructor(props) {
     super(props);
     this.state = {
-      details: [] //Empty array State for storing API data
+      details: [], //Empty array State for storing API data
     };
   }
 
@@ -23,10 +24,10 @@ class App extends React.Component {  //Simple class Component
   render() {
     return (
       <div>
-        {/* <Counter /> Not Rendering counter as of now- Code commented*/}
-        {/* passing state containing API data to Details as a prop */}
-        
-        <Details details = {this.state.details}/> 
+        <UserInfo />
+        {/* <Counter />
+        passing state containing API data to Details as a prop
+        <Details details = {this.state.details}/>  */}
       </div>
     );
   }
