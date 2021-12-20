@@ -2,25 +2,32 @@ import React from "react";
 class Details extends React.Component {
   render() {
     let details = this.props.details; //Receiving Props coming from App
+    let message = this.props.message;
     console.log(details);
-    return (
-      <div>
-        <li>
-          {details.map((data) => {
-            console.log("data", data);
-            return <ol>Move Title :{data.title}</ol>;
-          })}
-        </li>
-      </div>
-    );
+    if (details.length >= 1) {
+      return (
+        <div>
+          <li>
+            {details.map((data) => {
+              console.log("data", data);
+              return <ol>Move Title :{data.title}</ol>;
+            })}
+          </li>
+        </div>
+      )
+    } else {
+      return (
+        <div>
+          <p>{message}</p>
+        </div>
+      );
+    }
   }
 }
 
 export default Details;
 
-
 //Forget about counter conponent for Now, Just Focus on App.js and Details.js.
-
 
 //Idea for this session is to Pass movieDetails from App component to Details component
 // App is parent and Details is Child - Because we are rendering Details in App.
